@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>[JS] ªC to ªF</title>
+	<script src="http://code.jquery.com/jquery-1.11.0.min.js"></script>
+</head>
+<body>
+	
+	<p> Convertir Celsius  a Farenheit y viceversa</p>
+	<p><input type="text" id="cels" placeholder="00"> grados Celsius  es igual a <input type="text" id="faren" placeholder="32"> grados Farenheit </p>
+	<script type="text/javascript">
+
+
+		function convertToF(num1) {
+		  return f = (num1 * 1.8) + 32.00;
+		}
+
+		function convertToC(num2){
+			return c = (num2 - 32) / 1.8
+		}
+
+	</script>
+	<script type="text/javascript">
+
+		$( "#cels" ).on( "input", function(){
+			celsius = parseInt($(this).val());
+			farenheit = convertToF(celsius);
+			$("#faren").val(farenheit);
+		});
+		$( "#faren" ).on( "input", function(){
+			farenheit = parseInt($(this).val());
+			celsius = convertToC(farenheit);
+			$("#cels").val(celsius);
+		});
+
+	</script>
+</body>
+</html
